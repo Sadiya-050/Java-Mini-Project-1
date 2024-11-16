@@ -1,17 +1,30 @@
-//Name: Sadiya Maheen Siddiqui
-//Class: BE 2nd Year, CSE
-//Roll Number: 100523733050
-//Mini Coding Project - 1 Using Java
+/**
+ * @author Sadiya Maheen Siddiqui
+ * @version 1.0
+ * Class: BE 2nd Year, CSE
+ * Roll Number: 100523733050
+ * Mini Coding Project - 1
+*/
+
+/*
+Sample Command Line Inputs:
+"DOB=28-02-2001", "27-02-2024", "DD-MM-YYYY", "-"
+"AGE=27-10-0019", "27-10-2024", "DD-MM-YYYY", "-"
+*/
 
 import java.time.*;
 
+//Exception Class
 class UserDefinedException extends Exception {
     public UserDefinedException(String message) {
         super(message);
     }
 }
 
+// Main Class
 public class Project {
+
+    // Exception Method
     public static void ThrowException(String message) {
         try {
             throw new UserDefinedException(message);
@@ -21,6 +34,7 @@ public class Project {
         }
     }
 
+    // Main Method
     public static void main(String[] args) {
         int i = 0;
         if (args.length != 4) {
@@ -44,6 +58,7 @@ public class Project {
         }
     }
 
+    // Checks the Order of 2 Dates
     public static boolean checkDateOrder(LocalDate date, LocalDate refDate) {
         if (date.isAfter(refDate)) {
             return false;
@@ -51,6 +66,7 @@ public class Project {
         return true;
     }
 
+    // Date of Birth Calculation
     public static void calculateDOB(String[] arguments) {
         String del = arguments[3];
         String[] date = arguments[0].substring(4, 14).split(del);
@@ -84,6 +100,7 @@ public class Project {
                 + between.getDays() + " days");
     }
 
+    // Age Calculation
     public static void calculateAge(String[] arguments) {
         String del = arguments[3];
         String[] date = arguments[0].substring(4, 14).split(del);
