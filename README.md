@@ -26,11 +26,15 @@ The program expects **exactly 4 command-line arguments**:
 4. The fourth argument is the **delimiter** used in the date inputs (e.g., `-` or `/`).
 
 ## Example Command Line Inputs:
-1. **Calculate Age:** "DOB=28-02-2001", "27-02-2024", "DD-MM-YYYY", "-"
+1. **Calculate Age:**
+"DOB=28-02-2001", "27-02-2024", "DD-MM-YYYY", "-"
+
 **Output:**  
 `Your Age: 23 years, 11 months, 0 days`
 
-2. **Calculate Date of Birth:** "AGE=27-10-0019", "27-10-2024", "DD-MM-YYYY", "-"
+3. **Calculate Date of Birth:**
+"AGE=27-10-0019", "27-10-2024", "DD-MM-YYYY", "-"
+
 **Output:**  
 `Your DOB: 27-10-2001`
 
